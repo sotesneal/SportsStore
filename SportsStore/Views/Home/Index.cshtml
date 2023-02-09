@@ -1,1 +1,14 @@
-﻿<h4>Welcome to SportsStore</h4>
+﻿@model ProductsListViewModel
+
+@foreach (var item in Model?.Products ?? Enumerable.Empty<Product>())
+{
+    <text>
+        <div class="product">
+            <h2>@item.Name</h2>
+            <p>@item.Description</p>
+            <p>@item.Price.ToString("c")</p>
+            <p>@item.Category</p>
+        </div>
+    </text>
+}
+<div page-model="@Model?.PagingInfo" page-action="Index"></div>

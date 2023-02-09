@@ -2,7 +2,7 @@
 {
     public class EFStoreRepository : IStoreRepository 
     {
-        private readonly StoreDbContext _dbContext;
+        private  StoreDbContext _dbContext;
         public EFStoreRepository(StoreDbContext ctx)
         {
            _dbContext = ctx;
